@@ -759,12 +759,17 @@ class ServicesApi
                     $e->setResponseObject($data);
                     break;
                 case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\iimmpact\Model\TopupResponse',
+                    // $data = ObjectSerializer::deserialize(
+                    //     $e->getResponseBody(),
+                    //     '\iimmpact\Model\TopupResponse',
+                    //     $e->getResponseHeaders()
+                    // );
+                    // $e->setResponseObject($data);
+                    return [
+                        ObjectSerializer::deserialize(json_decode($e->getResponseBody()), '\Swagger\Client\Model\TopupResponse', []),
+                        400,
                         $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
+                    ];
                     break;
                 case 401:
                     $data = ObjectSerializer::deserialize(

@@ -180,8 +180,5 @@ Class | Method | HTTP request | Description
 - **Location**: HTTP header
 
 
-## Author
-
-
 
 

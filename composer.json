@@ -6,13 +6,16 @@
         "swagger",
         "php",
         "sdk",
-        "api"
+        "api",
+        "iimmpact",
+        "iimmpact-php"
     ],
     "homepage": "http://swagger.io",
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
+            "name": "Alex Tan",
+            "email": "alex@iimmpact.com",
             "homepage": "https://github.com/swagger-api/swagger-codegen"
         }
     ],
